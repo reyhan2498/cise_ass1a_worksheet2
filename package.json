@@ -2,16 +2,35 @@
   "name": "cise_ass1a_worksheet2",
   "version": "1.0.0",
   "description": "mern app",
-  "main": "server.js",
+  "main": "app.js",
   "scripts": {
+    "start": "node app.js",
+    "app": "nodemon app.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon backend/server.js"
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix frontend/cise_ass1a_worksheet2 npm run build --prefix frontend/cise_ass1a_worksheet2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/reyhan2498/cise_ass1a_worksheet2.git"
   },
   "author": "Reyhan",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/reyhan2498/cise_ass1a_worksheet2/issues"
+  },
+  "homepage": "https://github.com/reyhan2498/cise_ass1a_worksheet2#readme",
   "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "config": "^3.3.6",
+    "cors": "^2.8.5",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
+    "heroku": "^7.56.1",
+    "mongoose": "^5.13.5",
+    "validation": "^0.0.1"
+  },
+  "devDependencies": {
     "nodemon": "^2.0.12"
   }
 }
